@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-  <h1>History of Education in the Philippines</h1>
+  <h1>History of Education in the Philippinesss</h1>
 
     </>
   )
