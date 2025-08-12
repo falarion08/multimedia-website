@@ -123,6 +123,6 @@
     @apply overscroll-none;
   }
   ul {
-    @apply list-disc;
+    @apply list-disc list-inside;
   }
 }
