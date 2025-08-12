@@ -16,8 +16,8 @@ import { Button } from "../ui/button"
 
 export default function PrecolonialSection() {
   return (
-    <div className=" relative">
-      <img src={bg} className="z-0 absolute h-screen w-screen blur-xs opacity-65" />
+    <div className="relative h-screen">
+      <img src={bg} className="z-0  h-screen w-screen blur-xs opacity-65 absolute top-0 left-0" />
       <div className="z-20 absolute px-5">
         <div id="precolonial-period" className="h-screen overflow-x-auto">
 
