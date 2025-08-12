@@ -22,7 +22,7 @@ import {
 export default function CardComponent(props: any) {
 
   return (
-    <Card className="w-full max-w-sm min-h-48">
+    <Card className="w-full max-w-sm min-h-48 relative ">
       <CardHeader>
         <CardTitle className="text-center">{props.title}</CardTitle>
         <CardDescription>
@@ -42,7 +42,7 @@ function PopupModal(props: any) {
   return (
     <>
       <Dialog>
-        <DialogTrigger><Button variant="link">Learn More</Button></DialogTrigger>
+        <DialogTrigger className="absolute bottom-1 w-full left-0"><Button variant="link" >Learn More</Button></DialogTrigger>
         <DialogContent>
           <DialogHeader>
             <DialogTitle className="text-xl text-center">{props.title}</DialogTitle>
