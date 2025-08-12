@@ -1,40 +1,40 @@
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
+import image1 from "../../assets/images/image1_carousel.jpg"
+import image2 from "../../assets/images/image2_carousel.jpg"
+import image3 from "../../assets/images/image3_carousel.jpg"
+import image4 from "../../assets/images/image4_carousel.jpg"
 
-import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  
 } from "@/components/ui/carousel"
 
 export function CarouselPlugin() {
+
+  const im_arr = [image1,image2,image3,image4]
   const plugin = React.useRef(
-    Autoplay({ delay: 6000})
+    Autoplay({ delay: 3000})
   )
 
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-full max-w-xs"
+      className="w-full h-full overscroll-none overflow-hidden absolute"
     >
       <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
+        {im_arr.map((im_name, index) => (
+          <CarouselItem key={index} className="">
+            <div className="overscroll-none">
+                <img src={im_name} alt="Logo" className="w-full blur-xs opacity-55" />
+
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+
     </Carousel>
   )
 }

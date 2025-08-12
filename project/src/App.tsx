@@ -1,8 +1,12 @@
 import HomepageSection from "./components/sections/homepage"
+import PrecolonialSection from "./components/sections/precolonial"
+
 function App() {
   return (
-    <div>
+    <div className="relative">
       <HomepageSection/>
+      <PrecolonialSection/>
+
     </div>
   )
 }
